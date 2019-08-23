@@ -12,10 +12,8 @@ export default function CharacterCard(props) {
     axios.get(`https://rickandmortyapi.com/api/character/${props.character.id}`)
     .then(res => {
       setCharacter(res.data)
-      console.log()
     })
   }, []);
-  console.log(character)
   return (
     <Card>
       <Image src= {character.image}/>
