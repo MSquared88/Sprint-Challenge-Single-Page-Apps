@@ -15,7 +15,7 @@ export default function CharacterCard(props) {
       console.log()
     })
   }, []);
-
+  console.log(character)
   return (
     <Card>
       <Image src= {character.image}/>
@@ -28,13 +28,18 @@ export default function CharacterCard(props) {
             <span className='date'>Status: {character.status}</span>
           </Card.Meta>
           <Card.Description>
-            {/* <span>{`${character.location.mame}  ${character.origin.name}`}</span> */}
+            {
+            (!character.name)
+            ?  <span>loading name</span>
+            :<span> {character.location.name}</span>}
           </Card.Description>
       </Card.Content>
       <Card.Content extra>
           <a>
-            <Icon name='user' />
-            Episodes: {/*`${character.episode.length}`*/}
+            <Icon name='tv' />
+            {(!character.episode)
+            ? <span>loading episodes</span>
+            :<span> Episodes: {character.episode.length}</span>}
           </a>
       </Card.Content>
     </Card>
