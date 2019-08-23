@@ -7,5 +7,33 @@ import { NavLink } from "react-router-dom";
 // https://react.semantic-ui.com/modules/tab/
 export default function TabNav() {
 
+    return(
+        <Menu tabular>
+            <NavLink to='/'>
+                <Menu.Item
+                name='Home'
+
+                />
+            </NavLink>
+            <NavLink to='/characters'>
+                <Menu.Item
+                name='Characters'
+
+                />
+            </NavLink>
+            <NavLink to='/locations'>
+                <Menu.Item
+                name='locations'
+
+                />
+            </NavLink>
+            <NavLink to='/episodes'>
+                <Menu.Item
+                name='episodes'
+                />
+            </NavLink>
+ 
+      </Menu>
+    )
 };
 
