@@ -11,14 +11,21 @@ export default function CharacterList() {
   useEffect(() => {
     // TODO: Add API Request here - must run in `useEffect`
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
-
+    
+    axios.get('https://rickandmortyapi.com/api/character/')
+    .then(res => {
+      console.log(res.data.results)
+      setCharacters(res.data.results)
+    })
   }, []);
 
   return (
     <section className="character-list grid-view">
-      <h2>TODO: `array.map()` over your state here!</h2>
       <Card>
-        <CharacterCard/>
+        {characters.map(character =>(
+          <CharacterCard character={character}/> 
+        ))}
+
       </Card>
 
     </section>
