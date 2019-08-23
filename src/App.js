@@ -13,14 +13,12 @@ import EpisodeList from './components/EpisodeList'
 export default function App() {
   return (
     <main>
+      <Header/>
       <TabNav />
-      <Route exact path='/' component={Header}/>
+      <Route exact path='/' component={WelcomePage}/>
       <Route exact path='/characters' component={CharacterList}/>
       <Route exact path='/locations' component={LocationsList}/>
       <Route exact path='/episodes' component={EpisodeList}/>
-      {/* <WelcomePage/> */}
-      {/* <CharacterList/> */}
-      {/* <LocationsList/> */}
     </main>
   );
 }

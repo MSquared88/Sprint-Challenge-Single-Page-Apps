@@ -1,6 +1,8 @@
 import React from "react";
 import { Tab, Menu, Icon } from "semantic-ui-react";
 import { NavLink } from "react-router-dom";
+import 'semantic-ui-css/semantic.min.css';
+
 
 // TODO: Add missing tabs below
 // Take a look at React Semantic UI tabs 
@@ -11,8 +13,7 @@ export default function TabNav() {
         <Menu tabular>
             <NavLink to='/'>
                 <Menu.Item
-                name='Home'
-
+                name={`Home`}
                 />
             </NavLink>
             <NavLink to='/characters'>

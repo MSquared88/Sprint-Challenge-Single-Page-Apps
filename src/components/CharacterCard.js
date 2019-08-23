@@ -12,7 +12,7 @@ export default function CharacterCard(props) {
     axios.get(`https://rickandmortyapi.com/api/character/${props.character.id}`)
     .then(res => {
       setCharacter(res.data)
-      console.log(res)
+      console.log()
     })
   }, []);
 
@@ -22,7 +22,10 @@ export default function CharacterCard(props) {
       <Card.Content>
         <Card.Header>{character.name}</Card.Header>
           <Card.Meta>
-            <span className='date'>{character.species}  {character.status}</span>
+            <span className='date'>Species: {character.species}</span>
+          </Card.Meta>
+          <Card.Meta>
+            <span className='date'>Status: {character.status}</span>
           </Card.Meta>
           <Card.Description>
             {/* <span>{`${character.location.mame}  ${character.origin.name}`}</span> */}
@@ -31,7 +34,7 @@ export default function CharacterCard(props) {
       <Card.Content extra>
           <a>
             <Icon name='user' />
-            Episodes
+            Episodes: {/*`${character.episode.length}`*/}
           </a>
       </Card.Content>
     </Card>
