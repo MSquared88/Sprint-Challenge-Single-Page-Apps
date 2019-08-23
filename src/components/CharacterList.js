@@ -21,13 +21,11 @@ export default function CharacterList() {
 
   return (
     <section className="character-list grid-view">
-      <Card>
-        {characters.map(character =>(
-          <CharacterCard character={character}/> 
-        ))}
-
-      </Card>
-
+        <Card.Group itemsPerRow={2}>
+          {characters.map(character =>(
+            <CharacterCard character={character}/> 
+          ))}
+        </Card.Group>
     </section>
   );
 }

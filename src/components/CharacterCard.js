@@ -17,24 +17,23 @@ export default function CharacterCard(props) {
   }, []);
 
   return (
-  <>
-
-    <Image src= {character.image}/>
-    <Card.Content>
-      <Card.Header>{character.name}</Card.Header>
-        <Card.Meta>
-          <span className='date'>{character.species}  {character.status}</span>
-        </Card.Meta>
-        <Card.Description>
-          {/* <span>{`${character.location.mame}  ${character.origin.name}`}</span> */}
-        </Card.Description>
-    </Card.Content>
-      <Card.Content extra>
-        <a>
-          <Icon name='user' />
-          Episodes
-        </a>
+    <Card>
+      <Image src= {character.image}/>
+      <Card.Content>
+        <Card.Header>{character.name}</Card.Header>
+          <Card.Meta>
+            <span className='date'>{character.species}  {character.status}</span>
+          </Card.Meta>
+          <Card.Description>
+            {/* <span>{`${character.location.mame}  ${character.origin.name}`}</span> */}
+          </Card.Description>
       </Card.Content>
-  </>
+      <Card.Content extra>
+          <a>
+            <Icon name='user' />
+            Episodes
+          </a>
+      </Card.Content>
+    </Card>
   )
 }
