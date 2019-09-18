@@ -29,7 +29,7 @@ export default function CharacterCard(props) {
             {
             (!character.name)
             ?  <span>loading name</span>
-            :<span> {character.location.name}</span>}
+            :<span>Location: {character.location.name}</span>}
           </Card.Description>
       </Card.Content>
       <Card.Content extra>

@@ -22,7 +22,7 @@ export default function CharacterList() {
     <section className="character-list grid-view">
         <Card.Group itemsPerRow={2}>
           {characters.map(character =>(
-            <CharacterCard character={character}/> 
+            <CharacterCard character={character} characters={characters}/> 
           ))}
         </Card.Group>
     </section>

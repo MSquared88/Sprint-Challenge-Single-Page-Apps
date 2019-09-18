@@ -33,8 +33,7 @@ export default function TabNav() {
                 name='episodes'
                 />
             </NavLink>
- 
-      </Menu>
-    )
-};
 
+        </Menu>
+    )
+    };              

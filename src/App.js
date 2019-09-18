@@ -16,9 +16,9 @@ export default function App() {
       <Header/>
       <TabNav />
       <Route exact path='/' component={WelcomePage}/>
-      <Route exact path='/characters' component={CharacterList}/>
-      <Route exact path='/locations' component={LocationsList}/>
-      <Route exact path='/episodes' component={EpisodeList}/>
-    </main>
+      <Route  path='/characters' component={CharacterList}/>
+      <Route  path='/locations' component={LocationsList}/>
+      <Route  path='/episodes' component={EpisodeList}/>
+    </main>           
   );
-}
+} 
